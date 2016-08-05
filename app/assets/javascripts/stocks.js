@@ -12,7 +12,7 @@ lookupStock = function() {
     lookupStock();
  }).on('ajax:error', function(event, data, status) {
    $('#stock-lookup-results').replaceWith(' ');
-   $('#stock-lookup-errors').replaceWith('<p class="alert alert-danger">Stock was not found.</p>');
+   $('#stock-lookup-errors').replaceWith('<div class="col-md-12 alert alert-danger">Stock was not found.</div>');
  });
   
   
