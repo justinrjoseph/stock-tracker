@@ -14,6 +14,8 @@
     </div>
   <% end %>
   
+  <%= render 'common/spinner' %>
+  
   <% if @stock %>
     <div id="stock-lookup-results" class="well results-block col-md-12">
       <strong>Symbol: </strong> <%= @stock.ticker %>
