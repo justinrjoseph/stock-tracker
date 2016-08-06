@@ -16,7 +16,8 @@
   
   <%= render 'common/spinner' %>
   
-  <% if @users && @users.count > 0 %>
+  <% if @users %>
+    <% if @users.count > 0 %>
     <div id="friend-lookup-results" class="well results-block col-md-10">
       <table class="search-results-table col-md-12">
         <tbody>
@@ -37,8 +38,9 @@
         </tbody>
       </table>
     </div>
-  <% else %>
-  <p class="lead col-md-12">No users match your search criteria.</p>
+    <% else %>
+    <p class="lead col-md-12 alert alert-danger">No users match your search criteria.</p>
+    <% end %>
   <% end %>
   
   <div id="friend-lookup-errors" class="col-md-12"></div>
